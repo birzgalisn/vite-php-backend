@@ -38,7 +38,7 @@ services:
     volumes:
       - ./:/app
       - node_modules:/app/vite/node_modules
-    command: sh -c "npm install --prefix vite && npm run --prefix vite dev -- --host 0.0.0.0"
+    command: npm run --prefix vite dev -- --host 0.0.0.0
     ports:
       - 5173:5173
     environment:

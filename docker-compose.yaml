@@ -25,6 +25,8 @@ services:
     image: php:8.4-fpm-bookworm
     volumes:
       - ./public:/var/www/html
+      - ./php-fpm.conf:/usr/local/etc/php-fpm.conf:ro
+      - ./php-www.conf:/usr/local/etc/php-fpm.d/www.conf:ro
     environment:
       APP_ENV: development
     networks:
